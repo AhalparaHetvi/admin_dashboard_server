@@ -1,12 +1,12 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const path = require('path');
-const connectDB = require('./config/db.ts');
-const authRoutes = require('./routes/authRoutes');
+import express from 'express';
+import cors from 'cors'; // ✅ import cors
+import dotenv from 'dotenv';
+import path from 'path';
+import connectDB from './config/db';
+import authRoutes from './routes/authRoutes';
 
-const swaggerUi = require('swagger-ui-express');
-const YAML = require('yamljs');
+import swaggerUi from 'swagger-ui-express';
+import YAML from 'yamljs';
 
 dotenv.config();
 connectDB();

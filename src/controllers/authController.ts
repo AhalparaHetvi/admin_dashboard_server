@@ -1,9 +1,7 @@
-const express = require('express');
-import type { Request, Response } from 'express';
-
-const User = require('../models/User.ts');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+import { Request, Response } from 'express';
+import User from '../models/User';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 export const register = async (req: Request, res: Response) => {
   const { username, email, password } = req.body;
