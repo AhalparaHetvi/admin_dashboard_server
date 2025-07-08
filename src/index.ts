@@ -9,8 +9,12 @@ connectDB();
 
 const app = express();
 // app.use(cors());
+const allowedOrigins = [
+    'https://admin-5611e.web.app',
+    /^http:\/\/localhost:\d+$/, // allow any localhost port
+];
 app.use(cors({
-    origin: 'https://admin-5611e.web.app',
+    origin: allowedOrigins,
     credentials: true, // only if needed
 }));
 app.use(express.json());
