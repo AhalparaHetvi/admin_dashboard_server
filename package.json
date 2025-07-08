@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts",
-    "build": "tsc",
-    "start": "node --loader ts-node/esm src/index.ts",
+    "dev": "node api.js && ts-node-dev --respawn src/index.ts",
+    "build": "node api.js && tsc",
+    "start": "node api.js && node --loader ts-node/esm src/index.ts",
     "dev2": "nodemon src/index.ts"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.3",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2"
   },
